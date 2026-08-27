@@ -3,6 +3,7 @@ import dotenv from "dotenv";
 
 dotenv.config(); 
 
+//Creates a pool connection
 const pool = new Pool({
     host: process.env.DB_HOST, 
     user: process.env.DB_USER, 

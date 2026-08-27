@@ -10,7 +10,7 @@ export async function addVisitedCountry(countryCode: string){
     return result.rows[0]; 
 }
 
-export async function removeVisitedCountry(countryCode:string){
+export async function removeVisitedCountry(countryCode: string){
     const result = await pool.query("DELETE FROM visited_countries WHERE country_code = $1 RETURNING *", [countryCode]); 
     return result.rows; 
 }
